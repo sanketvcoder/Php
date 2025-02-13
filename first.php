@@ -190,6 +190,57 @@ for ($a5 = 1; $a5 <= 10; $a5++) {
         echo "<pre>";
         print_r($colors);
         echo "</pre>";
+
+        //Associative Array
+
+        $age = array(
+            "bill"=>10,
+            "joe"=> 21,
+            "peterson"=>31
+        );
+
+        echo "<pre>";
+            print_r($age);
+        echo "</pre>";
+
+        echo "<br>";echo "<br>";
+        //foreEach 
+
+
+        $array = array(10,20,30);
+
+        foreach($array as $value){
+            echo $value."<br>";
+        }
+        echo "<br>";echo "<br>";
+        foreach($age as $key => $value){
+            echo $key." = ".$value."<br>";
+        }
+
+        echo "<br>";echo "<br>";
+
+        // multi Dimension array
+
+        $data = [
+                ["krishna", "verma",50000],
+                ["Mohan","Rajput",40000],
+                ["Radhika","jatav",80000]
+            ];
+            echo "<table border='1' cellspacing='0' cellpadding='5'>";
+                echo "<th>Emp_Name</th>";
+                echo "<th>last_Name</th>";
+                echo "<th>Emp_Salary</th>";
+            foreach($data as $v1){
+                echo "<tr>";
+                foreach($v1 as $v2){
+                    echo "<td>".$v2."</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</table>";
+
+            echo "<br>";echo "<br>";
+
         ?>
     </body>
 </html>
