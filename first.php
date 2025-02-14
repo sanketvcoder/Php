@@ -241,6 +241,149 @@ for ($a5 = 1; $a5 <= 10; $a5++) {
 
             echo "<br>";echo "<br>";
 
-        ?>
+            $data2 = [
+                "krishna" => array("physics" => 89, "chemistry" => 83, "Math" => 90),
+                "Mohan"   => array("physics" => 69, "chemistry" => 82, "Math" => 70),
+                "Sonia"   => array("physics" => 90, "chemistry" => 45, "Math" => 80)
+            ];
+
+
+            
+
+
+
+                // 2nd 
+            echo "<table border='1' cellspacing='0' cellpadding='5'>";
+                // Table Header
+                echo "<tr>";
+                    echo "<th>Name</th>";
+                    echo "<th>Physics</th>";
+                    echo "<th>Chemistry</th>";
+                    echo "<th>Math</th>";
+                echo "</tr>";
+
+                // Table Data
+                foreach ($data2 as $name => $marks) {
+                    echo "<tr>";
+                        echo "<td>" . ucfirst($name) . "</td>";  // Capitalize first letter if needed
+                        echo "<td>" . $marks['physics'] . "</td>";
+                        echo "<td>" . $marks['chemistry'] . "</td>";
+                        echo "<td>" . $marks['Math'] . "</td>";
+                    echo "</tr>";
+                }
+            echo "</table>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+            //List Function
+
+
+            $emp=[
+                [1,"krishna", "Manager",50000],
+                [2,"Mohan","Salesman",null],
+                [3,"Radhika","Computer Operator",80000],
+                [4,"Amir","Driver",4000]
+            ];
+            echo "<table border='1' cellspacing='0' cellpadding='5'>";
+                echo "<tr>";
+                    echo "<th>Id</th>";
+                    echo "<th>Name</th>";
+                    echo "<th>Designation</th>";
+                    echo "<th>Salary</th>";
+                echo "</tr>";
+            foreach($emp as list($id,$name,$designation,$salary)){
+                echo "<tr><td>$id</td> <td>$name</td> <td>$designation</td> <td>$salary</td> </tr>";
+            }
+            echo "</table>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            //2nd associative array
+
+            $emp2 =  [
+                            [
+                                "id"       => 1,
+                                "name"     => "krishna",
+                                "position" => "Manager",
+                                "salary"   => 50000
+                            ],
+                            [
+                                "id"       => 2,
+                                "name"     => "Mohan",
+                                "position" => "Salesman",
+                                "salary"   => null
+                            ],
+                            [
+                                "id"       => 3,
+                                "name"     => "Radhika",
+                                "position" => "Computer Operator",
+                                "salary"   => 80000
+                            ],
+                            [
+                                "id"       => 4,
+                                "name"     => "Amir",
+                                "position" => "Driver",
+                                "salary"   => 4000
+                            ]
+                    ];
+
+                    echo "<table border='1' cellspacing='0' cellpadding='5'>";
+                echo "<tr>";
+                    echo "<th>Id</th>";
+                    echo "<th>Name</th>";
+                    echo "<th>Designation</th>";
+                    echo "<th>Salary</th>";
+                echo "</tr>";
+            foreach($emp2 as list("id"=>$id,"name"=>$name,"position"=>$designation,"salary"=>$salary)){
+                echo "<tr><td>$id</td> <td>$name</td> <td>$designation</td> <td>$salary</td> </tr>";
+            }
+            echo "</table>";
+
+
+
+
+
+
+
+            //Array functions 
+
+
+
+            //Count() & Sizeof() functions of array
+
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            $a9 = [1,"krishna", "Manager","50000"];
+
+            echo count($a9);
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            // in_array() used to return 1/0 based on element present in it or not 
+            if(in_array(50000,$a9,true)){
+                echo "Find Successfully";
+            }else{
+                echo "can't find";
+            }
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            // array_search() used to return the index/key if the element is present the array
+
+            echo array_search(50000,$a9);
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            // array_replace() crretae a new array and changes it 
+
+            
+
+            ?>
     </body>
 </html>
