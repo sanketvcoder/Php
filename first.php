@@ -382,7 +382,121 @@ for ($a5 = 1; $a5 <= 10; $a5++) {
 
             // array_replace() crretae a new array and changes it 
 
+            $b = ["Sanjay","sanket","kumar",1=>"verma"];
+            $b1 = ["Gagan","Salman"];
+
+            $newb=array_replace($b,$b1);
+
+            echo "<pre>";
+                print_r($newb);
+            echo "</pre>";
+
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            //array_replace_recursive() this method wors for the multi-dimensional associative array
+
+            $array1 = array("a"=> array("red"),"b"=> array("green","pink"));
+            $array2 = array("a"=> array("yellow"),"c"=> array("black"));
+            $newb2 = array_replace_recursive($array1,$array2);
+            echo "<pre>";
+                print_r($newb2);
+            echo "</pre>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+
+            // array_pop() remove the element form the last and push() it insert the element/value in last 
+
+            $fruit = array("orange","banana","apple","grapes");
+
+            array_pop($fruit);
+
+            echo "<pre>";
+                print_r($fruit);
+            echo "</pre>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+
+            // array_push()
+            $fruit1 = array("orange","banana","apple","grapes");
+
+            array_push($fruit1,"Mango","guava","lemon");
+
+            echo "<pre>";
+                print_r($fruit1);
+            echo "</pre>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            //array_shift() remove the first element/value from the first of the array   &&   array_unshift() adds the element/value to the first of the array
+
+
+            $toKnow = array("orange","banana","apple","grapes");
+
+            array_shift($toKnow);
+
+            echo "<pre>";
+                print_r($toKnow);
+            echo "</pre>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            //array_unshift()
+
+            $toKnow1 = array("orange","banana","apple","grapes");
+
+            array_unshift($toKnow1,"Apple","Mango");
+
+            echo "<pre>";
+                print_r($toKnow1);
+            echo "</pre>";
+
+            echo "<br>";echo "<br>";
+            echo "<br>";echo "<br>";
+
+            //array_merge() it merge two type of array like index or AssociativeArray &&  array_merger_recursive() merge the Multidimensional Associative Array where as the array_combine() used to merge only index Array
+
+
             
+            // Example 1: array_merge() with indexed arrays
+            $itemsA = ["Apple", "Banana"];
+            $itemsB = ["Orange", "Grapes"];
+            $c = array_merge($itemsA, $itemsB); // Merges two indexed arrays
+            echo "<pre>";
+            print_r($c);
+            echo "</pre>";
+
+            // Example 2: array_merge_recursive() with multidimensional associative arrays
+            $foodA = [
+                "fruits"  => ["Apple", "Banana"],
+                "veggies" => ["Carrot"]
+            ];
+            $foodB = [
+                "fruits"  => ["Orange"],
+                "veggies" => ["Spinach"],
+                "dairy"   => ["Milk"]
+            ];
+            $c = array_merge_recursive($foodA, $foodB); // Recursively merges arrays
+            echo "<pre>";
+            print_r($c);
+            echo "</pre>";
+
+            // Example 3: array_combine() with indexed arrays to form an associative array
+            $keysArr = ["first", "second", "third"];
+            $valuesArr = ["John", "Doe", "Smith"];
+            $c = array_combine($keysArr, $valuesArr); // Combines keys and values into an associative array
+            echo "<pre>";
+            print_r($c);
+            echo "</pre>";
+
+
 
             ?>
     </body>
